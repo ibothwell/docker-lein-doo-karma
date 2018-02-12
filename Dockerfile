@@ -6,6 +6,7 @@ RUN apk -U --no-cache --allow-untrusted add \
     grep \
     dbus \
     openssh-client \
+    git \
     # Firefox with virtual display
     firefox-esr \
     xvfb \
