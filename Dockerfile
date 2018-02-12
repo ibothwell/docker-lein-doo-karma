@@ -4,6 +4,7 @@ MAINTAINER Dimitri Fedorov <df@cloudgears.com>
 RUN apk -U --no-cache --allow-untrusted add \
     nodejs \
     grep \
+    dbus \
     # Firefox with virtual display
     firefox-esr \
     xvfb \
@@ -21,6 +22,10 @@ RUN rm -rf /var/lib/apt/lists/* \
     /usr/lib/node_modules/npm/doc \
     /usr/lib/node_modules/npm/html \
     /usr/lib/node_modules/npm/scripts
+
+RUN \
+    # create machine-id for gitlab shared runners
+    dbus-uuidgen > /var/lib/dbus/machine-id
 
 RUN \
     # Create chromium wrapper with required flags
