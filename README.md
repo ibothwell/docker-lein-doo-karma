@@ -50,3 +50,8 @@ It is should be a preferable way to interact with Chrome from Node, but to use i
 it is required to customize `karma.conf.js`.
 
 Doo does not support this, as it generates config file itself.
+
+### Credit
+
+This dockerfile is a fork of the original work done by
+[cloudgears](https://github.com/cloudgears) in the repo [docker-lein-doo-karma](https://github.com/cloudgears/docker-lein-doo-karma)
