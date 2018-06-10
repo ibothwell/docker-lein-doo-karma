@@ -35,15 +35,4 @@ RUN \
 ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
 
-RUN mkdir /usr/share/build
-WORKDIR /usr/share/build
-
-RUN set -x \
-    # Install node packages as local, using WORKDIR
-    && npm install --silent --global karma-cli \
-    && npm install --silent --save-dev \
-        karma \
-        karma-cljs-test \
-        karma-chrome-launcher
-
-COPY profiles.clj ./
+RUN npm install --silent --global karma-cli karma karma-cljs-test karma-chrome-launcher
