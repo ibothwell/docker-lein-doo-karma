@@ -6,6 +6,7 @@ RUN apk -U --no-cache --allow-untrusted add \
     dbus \
     openssh-client \
     git \
+    yarn \
     # Chromium with dependencies
     chromium \
     nss
